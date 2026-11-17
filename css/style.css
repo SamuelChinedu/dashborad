@@ -1,0 +1,135 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: sans-serif;
+    background-color: #f4f6f9;
+   color: #222;
+}
+.menu-btn{
+    display:none;
+    margin: 15px;
+    padding: 10px 15px;     
+    background-color: #0a2540;
+    color: #fff;
+    border: none;
+    font-size: 20px;
+   cursor: pointer; 
+
+}
+.sidebar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100vh;
+    padding: 20px;
+    background-color: #0a2540;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+}
+
+.brand{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    padding:  0 5px;
+    margin-bottom: 50px;
+}
+.brand-icon{
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    color: #0a2540;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: bold;
+    border-radius: 50%;
+}
+
+.brand-name{
+    font-size: 24px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+.close-btn{
+    margin-left: auto;
+    background-color: transparent;
+    border: none;
+    color:#fff;
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+}
+.menu-label{
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 0 10px 15px;
+    padding: 0 5px;
+}
+
+.nav-link{
+    display:block;
+    padding: 10px 5px;
+    text-decoration: none;
+    color: #c3d0dd;
+    font-size: 16px;
+    border-radius: 8px;
+    transition: 0.3s ease;
+}
+.nav-link:hover{
+    background-color: #4a76a1;
+    color: #fff;
+}
+
+.nav-link.active{
+    background-color: #4a76a1;
+    color: #fff;
+}
+
+.logout-btn{
+    margin-top: auto;
+    padding: 13px;
+    background-color: #4a76a1;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+.logout-btn:hover{
+    background-color: #3b5c7e;
+}
+@media(max-width:768px){
+    .menu-btn{
+        display: block;
+    }
+    .sidebar{
+        transform: translateX(-100%);
+    }
+body.sidebar-open .sidebar{
+    transform: translateX(0);
+}
+.close-btn{
+    display: block;
+}
+body.sidebar-open .overlay{
+    display: block;
+    position: fixed;
+    inset: 0;
+}
+
+}
+/* img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+
+} */
+
